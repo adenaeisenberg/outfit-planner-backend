@@ -5,7 +5,7 @@ class BottomsController < ApplicationController
   end
 
   def show
-    @bottom = Bottom.find_by(id: params[id]) 
+    @bottom = Bottom.find_by(id: params[:id]) 
     render json: @bottom
   end
 
