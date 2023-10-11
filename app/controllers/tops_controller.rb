@@ -25,4 +25,11 @@ class TopsController < ApplicationController
     )
     render json: @top 
   end
+
+def delete
+  @top = Top.find_by(id: params[:id])
+  @top.destroy 
+  render json: { message: "Top has been removed from your wardrobe!"}
+end
+
 end
