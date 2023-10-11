@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "/tops/:id" => "tops#show"
   post "/tops" => "tops#create"
   patch "/tops/:id" => "tops#update"
+  delete "/tops/:id" => "tops#destroy"
 end
