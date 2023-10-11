@@ -16,4 +16,12 @@ class TopsController < ApplicationController
     )
     render json: @top 
   end
+
+  def update
+    @top = Top.create(
+      name: params[:name] || @top.name,
+      image_url: params[:image_url] || @top.image_url ,
+    )
+    render json: @top 
+  end
 end
