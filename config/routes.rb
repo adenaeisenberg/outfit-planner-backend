@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   post "/tops" => "tops#create"
   patch "/tops/:id" => "tops#update"
   delete "/tops/:id" => "tops#destroy"
+
+  get "/bottoms" => "bottoms#index"
+  get "/bottoms/:id" => "bottoms#show"
+  post "/bottoms" => "bottoms#create"
+  patch "/bottoms/:id" => "bottoms#update"
+  delete "/bottoms/:id" => "bottoms#destroy"
 end
