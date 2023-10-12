@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # root "articles#index"
   get "/tops" => "tops#index"
   get "/tops/:id" => "tops#show"
   post "/tops" => "tops#create"
@@ -17,5 +16,7 @@ Rails.application.routes.draw do
   post "/outfits" => "outfits#create"
   patch "/outfits/:id" => "outfits#update"
   delete "/outfits/:id" => "outfits#destroy"
+
+  post "/users" => "users#create"
 
 end
