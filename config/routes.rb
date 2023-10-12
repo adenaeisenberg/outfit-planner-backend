@@ -11,4 +11,11 @@ Rails.application.routes.draw do
   post "/bottoms" => "bottoms#create"
   patch "/bottoms/:id" => "bottoms#update"
   delete "/bottoms/:id" => "bottoms#destroy"
+
+  get "/outfits" => "outfits#index"
+  get "/outfits/:id" => "outfits#show"
+  post "/outfits" => "outfits#create"
+  patch "/outfits/:id" => "outfits#update"
+  delete "/outfits/:id" => "outfits#destroy"
+
 end
