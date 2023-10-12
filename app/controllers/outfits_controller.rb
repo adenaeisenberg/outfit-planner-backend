@@ -1,35 +1,39 @@
 class OutfitsController < ApplicationController
   def index
-    @tops = Top.all 
-    render json: @tops
+    @outfits = Outfit.all 
+    render json: @outfits
   end
 
   def show
-    @top = Top.find_by(id: params[:id]) 
-    render json: @top
+    @outfit = Outfit.find_by(id: params[:id]) 
+    render json: @outfit
   end
 
   def create
-    @top = Top.create(
-      name: params[:name],
-      image_url: params[:image_url],
+    @outfit = Outfit.create(
+      day: params[:day],
+      top_id: params[:top_id],
+      bottom_id: params[:bottom_id],
+      user_id: params[:user_id], # to be changed
     )
-    render json: @top 
+    render json: @outfit 
   end
 
   def update
-    @top = Top.find_by(id: params[:id])
-    @top.update(
-      name: params[:name] || @top.name,
-      image_url: params[:image_url] || @top.image_url,
+    @outfit = Outfit.find_by(id: params[:id])
+    @outfit.update(
+      day: params[:day] || @outfit.day,
+      top_id: params[:top_id] || @outfit.top_id,
+      bottom_id: params[:bottom_id] || @outfit.bottom_id,
+      # user_id: params[:user_id] || @outfit.user_id, 
     )
-    render json: @top 
+    render json: @outfit 
   end
 
 def destroy
-  @top = Top.find_by(id: params[:id])
-  @top.destroy 
-  render json: { message: "Top has been removed from your wardrobe!"}
+  @outfit = Outfit.find_by(id: params[:id])
+  @outfit.destroy 
+  render json: { message: "Outfit has been removed from your wardrobe!"}
 end
 
 end
