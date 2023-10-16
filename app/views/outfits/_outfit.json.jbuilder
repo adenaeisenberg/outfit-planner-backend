@@ -1,2 +1,5 @@
-json.extract! outfit, :id, :created_at, :updated_at
-json.url outfit_url(outfit, format: :json)
+# json.id outfit.id
+# json.user_id outfit.user_id
+# json.day outfit.day
+# json.bottom outfit.bottom
+# json. outfit.
