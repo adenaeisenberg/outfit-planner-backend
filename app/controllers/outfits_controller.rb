@@ -1,11 +1,13 @@
 class OutfitsController < ApplicationController
   def index
-    @outfits = Outfit.all 
+    @outfits = current_user.outfits.all
+    # Outfit.all 
     render json: @outfits
   end
 
   def show
-    @outfit = Outfit.find_by(id: params[:id]) 
+    @outfit = current_user.outfits.find_by(id: params[:id])
+    # Outfit.find_by(id: params[:id]) 
     render json: @outfit
   end
 
