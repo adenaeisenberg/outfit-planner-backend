@@ -14,7 +14,9 @@ class OutfitsController < ApplicationController
       day: params[:day],
       top_id: params[:top_id],
       bottom_id: params[:bottom_id],
-      user_id: params[:user_id], # to be changed
+      # user_id: params[:user_id], 
+      # to be changed to 
+      user_id: current_user.id
     )
     render json: @outfit 
   end
