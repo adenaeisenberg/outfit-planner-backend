@@ -5,7 +5,7 @@ class TopsController < ApplicationController
   end
 
   def show
-    @top = Top.find_by(id: params[:id]) 
+    @top = current_user.tops.find_by(id: params[:id])
     render json: @top
   end
 
@@ -13,6 +13,7 @@ class TopsController < ApplicationController
     @top = Top.create(
       name: params[:name],
       image_url: params[:image_url],
+      user_id: current_user.id
     )
     render json: @top 
   end
