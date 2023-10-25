@@ -1,7 +1,6 @@
 class OutfitsController < ApplicationController
   def index
     @outfits = current_user.outfits.all
-    # Outfit.all 
     render json: @outfits
   end
 

@@ -1,6 +1,6 @@
 class TopsController < ApplicationController
   def index
-    @tops = Top.all 
+    @tops = current_user.tops.all 
     render json: @tops
   end
 
