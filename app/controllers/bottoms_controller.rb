@@ -1,11 +1,11 @@
 class BottomsController < ApplicationController
   def index
-    @bottoms = Bottom.all 
+    @bottoms = current_user.bottoms.all 
     render json: @bottoms
   end
 
   def show
-    @bottom = Bottom.find_by(id: params[:id]) 
+    @bottom = current_user.bottoms.find_by(id: params[:id]) 
     render json: @bottom
   end
 
