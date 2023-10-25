@@ -25,7 +25,6 @@ class OutfitsController < ApplicationController
       day: params[:day] || @outfit.day,
       top_id: params[:top_id] || @outfit.top_id,
       bottom_id: params[:bottom_id] || @outfit.bottom_id,
-      # user_id: params[:user_id] || @outfit.user_id, 
     )
     render json: @outfit 
   end
