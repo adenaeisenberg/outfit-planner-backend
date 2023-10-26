@@ -13,6 +13,7 @@ class BottomsController < ApplicationController
     @bottom = Bottom.create(
       name: params[:name],
       image_url: params[:image_url],
+      user_id: current_user.id
     )
     render json: @bottom 
   end
