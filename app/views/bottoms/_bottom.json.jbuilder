@@ -1,2 +1,3 @@
-json.extract! bottom, :id, :created_at, :updated_at
-json.url bottom_url(bottom, format: :json)
+json.id bottom.id
+json.name bottom.name
+json.image_url bottom.image_url
