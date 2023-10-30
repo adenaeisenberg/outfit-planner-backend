@@ -1,12 +1,14 @@
 class OutfitsController < ApplicationController
   def index
     @outfits = current_user.outfits.all
-    render json: @outfits
+    render :index 
+    # render json: @outfits
   end
 
   def show
     @outfit = current_user.outfits.find_by(id: params[:id])
-    render json: @outfit
+    render :show 
+    # render json: @outfit
   end
 
   def create
