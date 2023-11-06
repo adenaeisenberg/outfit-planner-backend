@@ -1,6 +1,7 @@
 class OutfitsController < ApplicationController
   def index
-    @outfits = current_user.outfits.all
+    @outfits = current_user.outfits.all.order('day ASC')
+    # @outfits = Outfit.order('day ASC')
     render :index 
     # render json: @outfits
   end
