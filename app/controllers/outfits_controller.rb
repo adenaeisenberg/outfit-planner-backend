@@ -1,6 +1,6 @@
 class OutfitsController < ApplicationController
   def index
-    @outfits = current_user.outfits.all.order('day ASC')
+    @outfits = current_user.outfits.all.order('day DESC')
     render :index 
   end
 
