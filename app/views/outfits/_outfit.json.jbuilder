@@ -5,4 +5,5 @@ json.bottom outfit.bottom
 json.top outfit.top
 
 json.bottom outfit.bottom, partial: "bottoms/bottom", as: :bottom
+
 json.top outfit.top, partial: "tops/top", as: :top
