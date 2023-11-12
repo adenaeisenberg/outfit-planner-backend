@@ -12,6 +12,7 @@ class TopsController < ApplicationController
   def create
     @top = Top.create(
       name: params[:name],
+      # image_url: params[:image_url],
       image_url: params[:image_url],
       user_id: current_user.id
     )
