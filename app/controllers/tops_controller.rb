@@ -12,7 +12,7 @@ class TopsController < ApplicationController
   def create
     @top = Top.create(
       name: params[:name],
-      image_url: params[:image_url],
+      image: params[:image],
       user_id: current_user.id
     )
     render json: @top 
@@ -22,7 +22,7 @@ class TopsController < ApplicationController
     @top = Top.find_by(id: params[:id])
     @top.update(
       name: params[:name] || @top.name,
-      image_url: params[:image_url] || @top.image_url,
+      # image: params[:image] || @top.image,
     )
     render json: @top 
   end
