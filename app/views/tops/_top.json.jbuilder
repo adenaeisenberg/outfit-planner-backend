@@ -1,3 +1,3 @@
 json.id top.id
 json.name top.name
-json.image top.image
+json.image_url top.image_url
